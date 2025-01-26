@@ -1,0 +1,253 @@
+/* Navigation */
+header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  opacity: 0.9;
+  background: #9aacfa;
+}
+
+nav {
+  padding: 0 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li.logo {
+  font-size: 1rem;
+}
+
+nav ul li.logo span {
+  color: #f2f7f6;
+  /* color: #2196f3; */
+}
+
+nav ul li.toggle {
+  order: 1;
+}
+
+nav ul li.menu-item {
+  display: none;
+  width: 100%;
+  text-align: center;
+  order: 2;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.4rem 0.4rem;
+  color: #fff;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #0400ef;
+}
+
+nav ul:has(li .menu-btn:checked) .menu-item {
+  display: block;
+}
+
+/* Draw the hamburger menu */
+nav ul li .menu-btn {
+  display: none;
+}
+
+nav ul li .menu-icon {
+  padding: 28px 20px;
+  cursor: pointer;
+}
+
+nav ul li .menu-icon .nav-icon {
+  background-color: #fff;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background-color 0.2s ease-out;
+}
+
+nav ul li .menu-icon .nav-icon:before,
+nav ul li .menu-icon .nav-icon:after {
+  background-color: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+}
+
+nav ul .menu-icon .nav-icon:before {
+  top: -5px;
+}
+
+nav ul li .menu-icon .nav-icon:after {
+  top: 5px;
+}
+
+/* Animate the hamburger menu */
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #f4f4f4;
+  overflow-x: hidden;
+  line-height: 1.2;
+}
+
+main {
+  padding: 2rem;
+}
+.page-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  background: url('../images/westcoast-3844702_1920.jpg') no-repeat center/cover;
+  z-index: -1;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.page h1 {
+  font-size: 4rem;
+  color: #faf8f8;
+}
+
+.page h3 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.page p {
+  padding: 1rem 0;
+}
+
+.page-title {
+  color: #f4f4f4;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.btn {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #fff;
+  background: #2416a3;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.8rem 2.5rem;
+  border: solid 1px #f4f4f4;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.btn-rounded {
+  border-radius: 25px;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+/* Grid settings */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: #1131be;
+  padding: 0.4rem;
+  transition: transform 0.2s;
+  border-radius: 10px;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card-body {
+  padding: 0.7rem;
+  font-size: 1.25rem;
+}
+.card:hover {
+  transform: scale(1.05);
+  background: #00897b;
+}
+/* Movie Details page... */
+#details .details-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0 2rem;
+}
+#details img {
+  width: 400px;
+  height: 100%;
+  object-fit: cover;
+}
+#details p {
+  margin: 1.25rem 0;
+}
+#details .info {
+  width: 100%;
+}
+#details .rating {
+  color: #e65100;
+}
+
+.overlay {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* movie details page media query*/
+@media (min-width: 768px) {
+  #details .details-top {
+    flex-direction: row;
+  }
+}
