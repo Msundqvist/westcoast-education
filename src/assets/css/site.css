@@ -4,7 +4,7 @@ header {
   z-index: 1;
   top: 0;
   opacity: 0.9;
-  background: #9aacfa;
+  background: #9aacfa2e;
 }
 
 nav {
@@ -21,14 +21,12 @@ nav ul {
 nav ul {
   list-style: none;
 }
-
-nav ul li.logo {
-  font-size: 1rem;
+nav li a img {
+  height: 5rem;
 }
 
-nav ul li.logo span {
-  color: #f2f7f6;
-  /* color: #2196f3; */
+.logo a img {
+  height: 5rem;
 }
 
 nav ul li.toggle {
@@ -148,6 +146,7 @@ main {
 .page h1 {
   font-size: 4rem;
   color: #faf8f8;
+  padding: 2rem;
 }
 
 .page h3 {
@@ -245,9 +244,53 @@ main {
   opacity: 0.3;
 }
 
-/* movie details page media query*/
 @media (min-width: 768px) {
-  #details .details-top {
-    flex-direction: row;
+  section p {
+    font-size: 1rem;
   }
+
+  nav ul {
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  nav ul li.menu-item {
+    display: block;
+    width: auto;
+  }
+
+  nav ul li.logo {
+    flex: 1;
+  }
+
+  nav ul li.toggle {
+    display: none;
+  }
+}
+/* New vehicle form */
+#user-form h1 {
+  padding: 1rem;
+}
+#user-form {
+  padding: 1.88rem 0;
+  margin: 0 1rem;
+}
+
+#user-form .form-control {
+  margin-bottom: 1rem;
+}
+
+#user-form label {
+  display: block;
+}
+
+#user-form input {
+  width: 100%;
+  padding: 0.63rem;
+  border: solid 1px #ddd;
+}
+
+#user-form input:focus {
+  outline: none !important;
+  border: solid 1px #ef6c00;
 }

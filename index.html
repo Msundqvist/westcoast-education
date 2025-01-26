@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/site.css" />
+    <link rel="stylesheet" href="/src/assets/css/site.css" />
     <script
       src="https://kit.fontawesome.com/55174c58a9.js"
       crossorigin="anonymous"></script>
@@ -16,9 +16,10 @@
           <ul class="menu">
             <li class="logo">
               <a class="page-title" href="index.html"
-                ><span><i class="fa-solid fa-courses"></i></span> Westcoast
-                Education</a
-              >
+                ><img
+                  src="./src/assets/images/Westcoast.png"
+                  alt="westcoast_logo"
+              /></a>
             </li>
             <li class="toggle">
               <input class="menu-btn" type="checkbox" id="menu-btn" />
@@ -27,10 +28,14 @@
               </label>
             </li>
             <li class="menu-item">
-              <a href="./index.html">Start</a>
+              <a href="index.html">Start</a>
             </li>
-            <li class="menu-item"><a href="#">Våra klasser</a></li>
-            <li class="menu-item"><a href="#">Kontakta Oss</a></li>
+            <li class="menu-item">
+              <a href="./src/pages/courses.html">Våra klasser</a>
+            </li>
+            <li class="menu-item">
+              <a href="/src/pages/user-page.html">Dina bokningar</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -45,7 +50,7 @@
           eller klassrum
         </p>
         <p>klicka här för att komma till våra kurser</p>
-        <a class="btn btn-rounded" href="#">Klicka här</a>
+        <a class="btn btn-rounded" href="/src/pages/courses.html">Klicka här</a>
       </div>
     </main>
     <footer>

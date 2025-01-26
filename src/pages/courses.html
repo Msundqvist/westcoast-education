@@ -11,16 +11,34 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <div class="logo"><a href="../index.html"> Westcoast education</a></div>
-        <nav>
-          <ul>
-            <li>
-              <a href="./user-page.html">Kund Sidan</a>
+      <nav>
+        <div class="container">
+          <ul class="menu">
+            <li class="logo">
+              <a class="page-title" href="/index.html"
+                ><img
+                  src="/src/assets/images/Westcoast.png"
+                  alt="westcoast_logo"
+              /></a>
+            </li>
+            <li class="toggle">
+              <input class="menu-btn" type="checkbox" id="menu-btn" />
+              <label class="menu-icon" for="menu-btn"
+                ><span class="nav-icon"></span>
+              </label>
+            </li>
+            <li class="menu-item">
+              <a href="/index.html">Start</a>
+            </li>
+            <li class="menu-item">
+              <a href="/src/pages/courses.html">Våra klasser</a>
+            </li>
+            <li class="menu-item">
+              <a href="/src/pages/user-page.html">Dina bokningar</a>
             </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
     <main>
       <section id="app-root" class="container">
