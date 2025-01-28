@@ -6,7 +6,7 @@ const listCourses = () => {
     displayCourse(courses);
 };
 const displayCourse = (courses) => {
-    const app = document.querySelector('#courses');
+    const app = document.querySelector('#all-courses');
     app.innerHTML = '';
     for (let course of courses) {
         const div = document.createElement('div');

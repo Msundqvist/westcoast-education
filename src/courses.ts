@@ -10,7 +10,7 @@ const listCourses = () => {
 };
 
 const displayCourse = (courses: Array<ICourses>) => {
-  const app = document.querySelector('#courses') as HTMLDivElement;
+  const app = document.querySelector('#all-courses') as HTMLDivElement;
   app.innerHTML = '';
 
   for (let course of courses) {
