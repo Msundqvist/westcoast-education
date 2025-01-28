@@ -37,7 +37,7 @@ export const courses: ICourses[] = [
     duration: 15,
     classRoom: false,
     distans: true,
-    image: 'paint1.jpg',
+    image: 'painting.jpg',
     startDate: '2025-07-15',
     popular: true,
   },
