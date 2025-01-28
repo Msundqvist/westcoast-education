@@ -1,6 +1,6 @@
 export interface ICourses {
+  courseNumber: number;
   coursName: string;
-  courseNumber: string;
   duration: number;
   classRoom: boolean;
   distans: boolean;
