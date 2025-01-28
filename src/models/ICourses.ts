@@ -4,6 +4,7 @@ export interface ICourses {
   duration: number;
   classRoom: boolean;
   distans: boolean;
-  startDate: '2025-07-15';
+  image: string;
+  startDate: string;
   popular: boolean;
 }
