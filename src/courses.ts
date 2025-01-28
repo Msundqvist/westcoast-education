@@ -22,7 +22,7 @@ const displayCourse = (courses: Array<ICourses>) => {
     const p = document.createElement('p');
     const small = document.createElement('small');
 
-    div.classList.add('courses');
+    div.classList.add('card');
     imageAnchor.href = `./course-detail.html?courseNumber=${course.courseNumber}`;
     image.alt = `${course.coursName}`;
     image.src = `/src/assets/images/${course.image}`;
