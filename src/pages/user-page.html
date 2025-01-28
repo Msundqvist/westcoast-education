@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/site.css" />
+    <link rel="stylesheet" href ="/src/assets/css/navigation.css"/>
+    <link rel="stylesheet" href="/src/assets/css/site.css" />
+    <link rel="stylesheet" href ="/src/assets/css/usercheckout.css"/>
     <script
       src="https://kit.fontawesome.com/55174c58a9.js"
       crossorigin="anonymous"></script>
@@ -15,7 +17,7 @@
         <div class="container">
           <ul class="menu">
             <li class="logo">
-              <a class="page-title" href="/index.html"
+              <a class="page-title" href="../pages/index.html"
                 ><img
                   src="/src/assets/images/Westcoast.png"
                   alt="westcoast_logo"
@@ -28,7 +30,7 @@
               </label>
             </li>
             <li class="menu-item">
-              <a href="/index.html">Start</a>
+              <a href="../pages/index.html">Start</a>
             </li>
             <li class="menu-item">
               <a href="../pages/courses.html">Våra klasser</a>
@@ -42,11 +44,11 @@
     </header>
     <main>
         <main>
-            <section id="user-form">
-              <h1>Skapa en ny användare</h1>
-              <form id="new-user">
+            <section id="form">
+              <h1 >Skapa en ny användare</h1>
+              <form id="form">
                 <div class="form-control">
-                  <label for="userName">Namn</label>
+                  <label for="userName">Förnam och Efternamn</label>
                   <input type="text" name="userName" id="userName" />
                 </div>
                 <div class="form-control">
@@ -54,24 +56,21 @@
                   <input type="text" name="adress" id="adress" />
                 </div>
                 <div class="form-control">
-                  <label for="emailAdress">E-mail adress</label>
-                  <input type="text" name="emailAdress" id="emailAdress" />
+                  <label for="email">E-mail adress</label>
+                  <input type="text" name="email" id="email" />
                 </div>
                 <div class="form-control">
                   <label for="mobileNumber">Mobilnummer</label>
                   <input type="text" name="mobileNumber" id="mobileNumber" />
                 </div>
-                <button id="save-vehicle" class="btn" type="submit">Spara</button>
+                <button id="save-order" class="btn" type="submit">Spara</button>
+                <button class="btn" id="delete">ta bort</button>
+                <button class="btn" id="update">uppdatera</button>
               </form>
             </section>
             <section class="container">
-              <button class="btn" id="delete">ta bort</button>
-              <p></p>
-              <button class="btn" id="update">uppdatera</button>
-              <p></p>
+              <div class="courseList"></div>
             </section>
-            <section id=""></section>
     </main>
-    <footer></footer>
   </body>
 </html>

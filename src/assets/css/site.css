@@ -1,113 +1,5 @@
-/* Navigation */
-header {
-  position: sticky;
-  z-index: 1;
-  top: 0;
-  opacity: 0.9;
-  background: #9aacfa2e;
-}
-
-nav {
-  padding: 0 1rem;
-}
-
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-}
-nav li a img {
-  height: 5rem;
-}
-
-.logo a img {
-  height: 5rem;
-}
-
-nav ul li.toggle {
-  order: 1;
-}
-
-nav ul li.menu-item {
-  display: none;
-  width: 100%;
-  text-align: center;
-  order: 2;
-}
-
-nav ul li a {
-  display: block;
-  padding: 0.4rem 0.4rem;
-  color: #fff;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  color: #0400ef;
-}
-
-nav ul:has(li .menu-btn:checked) .menu-item {
-  display: block;
-}
-
-/* Draw the hamburger menu */
-nav ul li .menu-btn {
-  display: none;
-}
-
-nav ul li .menu-icon {
-  padding: 28px 20px;
-  cursor: pointer;
-}
-
-nav ul li .menu-icon .nav-icon {
-  background-color: #fff;
-  display: block;
-  height: 2px;
-  width: 18px;
-  position: relative;
-  transition: background-color 0.2s ease-out;
-}
-
-nav ul li .menu-icon .nav-icon:before,
-nav ul li .menu-icon .nav-icon:after {
-  background-color: #fff;
-  content: '';
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-}
-
-nav ul .menu-icon .nav-icon:before {
-  top: -5px;
-}
-
-nav ul li .menu-icon .nav-icon:after {
-  top: 5px;
-}
-
-/* Animate the hamburger menu */
-nav ul li .menu-btn:checked ~ .menu-icon .nav-icon {
-  background: transparent;
-}
-
-nav ul li .menu-btn:checked ~ .menu-icon .nav-icon::before {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-nav ul li .menu-btn:checked ~ .menu-icon .nav-icon::after {
-  transform: rotate(45deg);
-  top: 0;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;1,200;1,400;1,500;1,600&display=swap');
+/* reset*/
 * {
   margin: 0;
   padding: 0;
@@ -149,19 +41,12 @@ main {
   padding: 2rem;
 }
 
-.page h3 {
-  text-align: center;
-  font-size: 1.8rem;
-}
-
 .page p {
   padding: 1rem 0;
 }
 
-.page-title {
-  color: #f4f4f4;
-  font-size: 4rem;
-  font-weight: 700;
+logo a img {
+  height: 5rem;
 }
 .btn {
   display: inline-block;
@@ -209,7 +94,7 @@ main {
   transform: scale(1.05);
   background: #00897b;
 }
-/* Movie Details page... */
+/* course page... */
 #details .details-top {
   display: flex;
   flex-direction: column;
@@ -243,7 +128,6 @@ main {
   z-index: -1;
   opacity: 0.3;
 }
-
 @media (min-width: 768px) {
   section p {
     font-size: 1rem;
@@ -266,31 +150,4 @@ main {
   nav ul li.toggle {
     display: none;
   }
-}
-/* New vehicle form */
-#user-form h1 {
-  padding: 1rem;
-}
-#user-form {
-  padding: 1.88rem 0;
-  margin: 0 1rem;
-}
-
-#user-form .form-control {
-  margin-bottom: 1rem;
-}
-
-#user-form label {
-  display: block;
-}
-
-#user-form input {
-  width: 100%;
-  padding: 0.63rem;
-  border: solid 1px #ddd;
-}
-
-#user-form input:focus {
-  outline: none !important;
-  border: solid 1px #ef6c00;
 }

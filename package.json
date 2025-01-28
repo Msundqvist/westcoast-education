@@ -1,0 +1,25 @@
+{
+  "name": "westcoast-education",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "server": "npx json-server courses.json",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Msundqvist/westcoast-education.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Msundqvist/westcoast-education/issues"
+  },
+  "homepage": "https://github.com/Msundqvist/westcoast-education#readme",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
