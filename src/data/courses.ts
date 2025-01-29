@@ -3,6 +3,7 @@ import { ICourses } from '../models/ICourses';
 export const courses: ICourses[] = [
   {
     courseNumber: 1,
+    background: 'malt.jpg',
     coursName: 'Brewing class',
     duration: 10,
     classRoom: true,
@@ -13,6 +14,7 @@ export const courses: ICourses[] = [
   },
   {
     courseNumber: 2,
+    background: 'dogtrainer.jpg',
     coursName: 'obedience class',
     duration: 5,
     classRoom: false,
@@ -23,6 +25,7 @@ export const courses: ICourses[] = [
   },
   {
     courseNumber: 3,
+    background: 'naturePhotographers.jpg',
     coursName: 'Bird watching',
     duration: 3,
     classRoom: true,
@@ -33,6 +36,7 @@ export const courses: ICourses[] = [
   },
   {
     courseNumber: 4,
+    background: 'paint1.jpg',
     coursName: 'Painting class',
     duration: 15,
     classRoom: false,
@@ -43,6 +47,7 @@ export const courses: ICourses[] = [
   },
   {
     courseNumber: 5,
+    background: 'food.jpg',
     coursName: 'Cooking class',
     duration: 5,
     classRoom: true,
@@ -53,7 +58,8 @@ export const courses: ICourses[] = [
   },
   {
     courseNumber: 6,
-    coursName: 'Survive in the wilderness',
+    background: 'wilderness.jpg',
+    coursName: 'Survive the wilderness',
     duration: 5,
     classRoom: false,
     distans: true,

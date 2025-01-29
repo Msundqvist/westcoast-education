@@ -1,5 +1,6 @@
 export interface ICourses {
   courseNumber: number;
+  background: string;
   coursName: string;
   duration: number;
   classRoom: boolean;

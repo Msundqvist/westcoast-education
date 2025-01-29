@@ -1,10 +1,10 @@
 {
   "name": "westcoast-education",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "courses.js",
   "scripts": {
     "dev": "tsc --watch",
-    "server": "npx json-server curses.json",
+    "server": "npx json-server courses.json",
     "test": "vitest"
   },
   "repository": {

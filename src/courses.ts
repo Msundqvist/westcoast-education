@@ -8,19 +8,22 @@ const initApp = () => {
 const listCourses = () => {
   displayCourse(courses);
 };
-
+// skapade första delen av en funktion för att byta ut document.create...
+const createElement = (element: string): HTMLElement => {
+  return document.createElement(element);
+};
 const displayCourse = (courses: Array<ICourses>) => {
   const app = document.querySelector('#all-courses') as HTMLDivElement;
   app.innerHTML = '';
 
   for (let course of courses) {
-    const div = document.createElement('div');
-    const imageAnchor = document.createElement('a');
-    const image = document.createElement('img');
-    const cardBody = document.createElement('div');
-    const heading = document.createElement('h5');
-    const p = document.createElement('p');
-    const small = document.createElement('small');
+    const div = createElement('div') as HTMLDivElement;
+    const imageAnchor = createElement('a') as HTMLAnchorElement;
+    const image = createElement('img') as HTMLImageElement;
+    const cardBody = createElement('div') as HTMLDivElement;
+    const heading = createElement('h5') as HTMLHeadingElement;
+    const p = createElement('p') as HTMLParagraphElement;
+    const small = createElement('small') as HTMLElement;
 
     div.classList.add('card');
     imageAnchor.href = `./course-detail.html?courseNumber=${course.courseNumber}`;
@@ -29,6 +32,19 @@ const displayCourse = (courses: Array<ICourses>) => {
 
     imageAnchor.appendChild(image);
     div.appendChild(imageAnchor);
+
+    cardBody.classList.add('card-body');
+    heading.classList.add('card-title');
+    heading.textContent = course.coursName;
+
+    p.classList.add('card-text');
+    small.textContent = `Kursstart: ${course.startDate} `;
+    p.appendChild(small);
+
+    cardBody.append(heading);
+    cardBody.append(p);
+
+    div.append(cardBody);
 
     app.appendChild(div);
   }
