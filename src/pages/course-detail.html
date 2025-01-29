@@ -14,13 +14,36 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <div class="logo">
-          <a href="./index.html"
-            ><img src="/src/assets/images/Westcoast.png" alt="westcoast_logo"
-          /></a>
+      <nav>
+        <div class="container">
+          <ul class="menu">
+            <li class="logo">
+              <a class="page-title" href="../pages/index.html"
+                ><img
+                  src="/src/assets/images/Westcoast.png"
+                  alt="westcoast_logo"
+              /></a>
+            </li>
+            <li class="toggle">
+              <input class="menu-btn" type="checkbox" id="menu-btn" />
+              <label class="menu-icon" for="menu-btn"
+                ><span class="nav-icon"></span>
+              </label>
+            </li>
+            <li class="menu-item">
+              <a href="../pages/index.html">Start</a>
+            </li>
+            <li class="menu-item">
+              <a href="/src/pages/courses.html">Våra klasser</a>
+            </li>
+            <li class="menu-item">
+              <a href="/src/pages/user-page.html"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+            </li>
+          </ul>
         </div>
-      </div>
+      </nav>
     </header>
     <main>
       <section class="container">
@@ -32,6 +55,7 @@
         <div id="details">
           <!-- course details here... -->
         </div>
+        <div id="overlay" class="overlay"></div>
         <button class="btn" id="addToBooked">
           Boka kurs <i class="fa-solid fa-shop"></i>
         </button>

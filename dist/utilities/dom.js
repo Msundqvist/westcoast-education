@@ -1,7 +1,7 @@
 export const createOverlay = (background) => {
     const overlayDiv = document.createElement('div');
     overlayDiv.style.backgroundImage = background
-        ? `./dist/assets/images${background})`
+        ? `url('/src/assets/images/${background}')`
         : '';
     overlayDiv.style.backgroundSize = 'cover';
     overlayDiv.style.backgroundPosition = 'center';
@@ -21,7 +21,7 @@ export const createCourseDetailsDisplay = (course) => {
       <div class="details-top">
         <div>
           ${course.image
-        ? `../../dist/assets/images/${course.image}"  alt="${course.coursName}"/>`
+        ? `<img src="/src/assets/images/${course.image}" alt="${course.coursName}"/>`
         : ''}
         </div>
         <div class="info">

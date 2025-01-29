@@ -1,5 +1,18 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;1,200;1,400;1,500;1,600&display=swap');
-/* reset*/
+
+/* =======================
+  GLOBAL STYLES
+======================= */
+:root {
+  --primary-color: #2416a3;
+  --hover-color: #1a0f80;
+  --accent-color: #e65100;
+  --text-color: #f4f4f4;
+  --bg-dark: #000;
+  --card-bg: #9aa5d6;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,58 +21,75 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #000;
-  color: #f4f4f4;
+  background-color: var(--bg-dark);
+  color: var(--text-color);
   overflow-x: hidden;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 main {
   padding: 2rem;
 }
+
+/* =======================
+  PAGE BACKGROUND
+======================= */
 .page-background {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100vw;
-  background: url('../images/westcoast-3844702_1920.jpg') no-repeat center/cover;
+  background: url('../../assets/images/westcoast-3844702_1920.jpg') no-repeat
+    center/cover;
   z-index: -1;
 }
 
+/* =======================
+  PAGE STRUCTURE
+======================= */
 .page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 2rem;
+  text-align: center;
+  padding: 2rem;
 }
 
 .page h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
+  font-weight: 700;
   color: #faf8f8;
   padding: 2rem;
 }
 
 .page p {
   padding: 1rem 0;
+  font-size: 1.2rem;
 }
 
-logo a img {
+/* =======================
+  LOGO STYLES
+======================= */
+.logo a img {
   height: 5rem;
 }
+
+/* =======================
+  BUTTONS
+======================= */
 .btn {
   display: inline-block;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #fff;
-  background: #2416a3;
-  line-height: 1.2;
-  white-space: nowrap;
-  text-decoration: none;
+  background: var(--primary-color);
   padding: 0.8rem 2.5rem;
-  border: solid 1px #f4f4f4;
-  outline: none !important;
+  border: solid 1px var(--text-color);
+  outline: none;
   cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-rounded {
@@ -67,41 +97,58 @@ logo a img {
 }
 
 .btn:hover {
-  opacity: 0.7;
+  background: var(--hover-color);
+  opacity: 0.85;
 }
 
+/* =======================
+  COURSE TITLE
+======================= */
 .course-title {
   display: flex;
   justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-/* Grid settings */
+/* =======================
+  GRID SYSTEM
+======================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.25rem;
 }
 
+/* =======================
+  COURSE CARDS
+======================= */
 .card {
-  background: #9aa5d6;
-  padding: 0.4rem;
-  transition: transform 0.2s;
+  background: var(--card-bg);
+  padding: 0.6rem;
+  transition: transform 0.3s ease-in-out;
   border-radius: 10px;
+  overflow: hidden;
 }
+
 .card img {
   width: 100%;
   border-radius: 10px;
 }
+
 .card-body {
   padding: 0.7rem;
   font-size: 1.25rem;
 }
+
 .card:hover {
   transform: scale(1.05);
   background: #2262ec;
 }
 
-/* course page... */
+/* =======================
+  COURSE DETAILS
+======================= */
 #details .details-top {
   display: flex;
   flex-direction: column;
@@ -110,21 +157,30 @@ logo a img {
   gap: 2rem;
   margin: 3rem 0 2rem;
 }
+
 #details img {
   width: 400px;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
+
 #details p {
   margin: 1.25rem 0;
+  font-size: 1.1rem;
 }
+
 #details .info {
   width: 100%;
 }
+
 #details .rating {
-  color: #e65100;
+  color: var(--accent-color);
+  font-weight: bold;
 }
 
+/* =======================
+  OVERLAY
+======================= */
 .overlay {
   position: absolute;
   display: none;
@@ -135,9 +191,44 @@ logo a img {
   z-index: -1;
   opacity: 0.3;
 }
+
+/* =======================
+  FORM STYLES
+======================= */
+#form {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+#form .form-control {
+  margin-bottom: 1.2rem;
+}
+
+#form label {
+  display: block;
+  font-weight: 600;
+}
+
+#form input {
+  width: 100%;
+  padding: 0.7rem;
+  border: solid 1px #ddd;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+#form input:focus {
+  outline: none;
+  border: solid 2px var(--accent-color);
+}
+
+/* =======================
+  RESPONSIVE DESIGN
+======================= */
 @media (min-width: 768px) {
   section p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   nav ul {
@@ -156,5 +247,9 @@ logo a img {
 
   nav ul li.toggle {
     display: none;
+  }
+
+  #form {
+    max-width: 600px;
   }
 }
