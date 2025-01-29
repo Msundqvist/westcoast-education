@@ -1,6 +1,10 @@
 import { courses } from './data/courses.js';
 import { createCourseDetailsDisplay, createOverlay } from './utilities/dom.js';
+import { UpdateCartItems } from './utilities/utilities.js';
+const addCourseToCartButton = document.querySelector('addToBooked');
+let cours;
 const initApp = () => {
+    UpdateCartItems();
     findCourse();
 };
 const findCourse = () => {
@@ -14,6 +18,9 @@ const findCourse = () => {
         displayError();
     }
 };
+const addToBooked = () => {
+    console.log('tillagt');
+};
 const displaycourse = (courses) => {
     document
         .querySelector('#details')
@@ -24,3 +31,4 @@ const displaycourse = (courses) => {
 };
 const displayError = () => { };
 document.addEventListener('DOMContentLoaded', initApp);
+addCourseToCartButton?.addEventListener('click', addToBooked);

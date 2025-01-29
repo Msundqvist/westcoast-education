@@ -1,8 +1,16 @@
 import { courses } from './data/courses.js';
 import { ICourses } from './models/ICourses.js';
+import { IOrder } from './models/IOrder.js';
+import { getCourse } from './services/course-service.js';
 import { createCourseDetailsDisplay, createOverlay } from './utilities/dom.js';
+import { updateCart, UpdateCartItems } from './utilities/utilities.js';
+
+const addCourseToCartButton = document.querySelector('addToBooked');
+
+let cours: ICourses[];
 
 const initApp = () => {
+  UpdateCartItems();
   findCourse();
 };
 
@@ -16,7 +24,9 @@ const findCourse = (): void => {
     displayError();
   }
 };
-
+const addToBooked = () => {
+  console.log('tillagt');
+};
 const displaycourse = (courses: ICourses) => {
   document
     .querySelector('#details')
@@ -28,3 +38,4 @@ const displaycourse = (courses: ICourses) => {
 
 const displayError = () => {};
 document.addEventListener('DOMContentLoaded', initApp);
+addCourseToCartButton?.addEventListener('click', addToBooked);
