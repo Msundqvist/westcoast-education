@@ -30,7 +30,7 @@ const handleUser = async (e) => {
         courseItems: cours,
     };
     try {
-        await fetch('http://localhost:3000/courses/'),
+        await fetch('http://localhost:3000/userOrders'),
             {
                 method: 'POST',
                 headers: {
